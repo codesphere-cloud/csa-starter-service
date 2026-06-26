@@ -1,0 +1,24 @@
+schemaVersion: v0.2
+prepare:
+  steps:
+    - name: ""
+      command: fnm install lts/latest --use
+test:
+  steps: []
+run:
+  service:
+    plan: 202
+    replicas: 1
+    network:
+      ports:
+        - port: 3000
+          isPublic: false
+      paths:
+        - port: 3000
+          path: /
+    env:
+      TENANT_NAME: Dev Tenant
+      APP_VERSION: 2
+      colorSchema: dark
+    steps:
+      - command: node server.js
