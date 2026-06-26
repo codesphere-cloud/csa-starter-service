@@ -16,6 +16,9 @@ run:
       paths:
         - port: 3000
           path: /
-    env: {}
+    env:
+      APP_VERSION: ${{ workspace.env['APP_VERSION'] }}
+      colorSchema: ${{ workspace.env['colorSchema'] }}
+      TENANT_NAME: ${{ workspace.env['TENANT_NAME'] }}
     steps:
       - command: node server.js
