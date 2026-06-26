@@ -1,15 +1,15 @@
-name: lego-poc
+name: starter-service
 version: v1
-author: L-Bank
-category: Fachverfahren
-displayName: L-Bank ElternGeld Online (LEGO)
-iconUrl: https://www.l-bank.de/b/common/graphics/l-bank.svg
+author: Bright Systems
+category: Development
+displayName: Starter Service
+iconUrl: https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg
 description: |
-  Elterngeld-Fachverfahren der L-Bank
+  Simple Starter Service in Node.js to showcase the provider.yaml
 
 backend:
   landscape:
-    ciProfile: dev
+    ciProfile: default
 
 configSchema:
   type: object
