@@ -1,0 +1,39 @@
+name: lego-poc
+version: v1
+author: L-Bank
+category: Fachverfahren
+displayName: L-Bank ElternGeld Online (LEGO)
+iconUrl: https://www.l-bank.de/b/common/graphics/l-bank.svg
+description: |
+  Elterngeld-Fachverfahren der L-Bank
+
+backend:
+  landscape:
+    ciProfile: dev
+
+configSchema:
+  type: object
+  properties:
+    TENANT_NAME:
+      type: string
+      description: Display name for the tenant using the Service
+    APP_VERSION:
+      type: string
+      description: Version of the App deployed
+      enum: ['1.0', '2.0']
+    colorSchema:
+      type: string
+      description: Color scheme for the frontend
+      enum: ['default', 'high-contrast', 'dark']
+
+detailsSchema:
+  type: object
+  properties: {}
+             
+secretsSchema: {}
+
+plans:
+  - id: 0
+    name: "Default"
+    description: "Default Plan"
+    parameters: {}

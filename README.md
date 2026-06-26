@@ -1,5 +1,35 @@
 # cs-starter-service
 
+## Starter Service Demo App
+
+This repository includes a small Node.js splash screen app that demonstrates how `configSchema` values from `provider.yml` are exposed as environment variables.
+
+The app reads:
+
+- `TENANT_NAME`
+- `APP_VERSION`
+- `colorSchema`
+
+### Run locally
+
+```bash
+npm start
+```
+
+Open `http://localhost:3000/`.
+
+### Run with demo values
+
+```bash
+TENANT_NAME="Acme City" APP_VERSION="2.0" colorSchema="high-contrast" npm start
+```
+
+### Color schemes
+
+- `default`
+- `high-contrast`
+- `dark`
+
 
 
 ## Getting started

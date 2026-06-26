@@ -1,0 +1,13 @@
+{
+  "name": "cs-starter-service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple splash screen app that reads provider config env vars",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
