@@ -21,10 +21,12 @@ configSchema:
       type: string
       description: Version of the App deployed
       enum: ['1.0', '2.0']
+      default: '1.0'
     colorSchema:
       type: string
       description: Color scheme for the frontend
       enum: ['default', 'high-contrast', 'dark']
+      default: 'default'
 
 detailsSchema:
   type: object
