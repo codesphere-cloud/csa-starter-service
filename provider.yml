@@ -1,11 +1,23 @@
 name: starter-service
-version: v1
+schemaVersion: v1
 author: Bright Systems
 category: Development
 displayName: Starter Service
 iconUrl: https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg
 description: |
   Simple Starter Service in Node.js to showcase the provider.yaml
+  
+capabilities:
+  backups: false
+  highAvailability: false
+  pause: false
+  pointInTimeRecovery: false
+
+versions:
+  0.0.1:
+    ciProfile: default
+    gitRef: main
+    description: ""
 
 backend:
   landscape:
@@ -34,8 +46,4 @@ detailsSchema:
              
 secretsSchema: {}
 
-plans:
-  - id: 0
-    name: "Default"
-    description: "Default Plan"
-    parameters: {}
+plans: []
