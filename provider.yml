@@ -1,41 +1,50 @@
-name: starter-service
-version: v1
-author: Bright Systems
-category: Development
-displayName: Starter Service
-iconUrl: https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg
-description: |
-  Simple Starter Service in Node.js to showcase the provider.yaml
-
+name: csa-starter-service
+schemaVersion: v1
 backend:
   landscape:
-    ciProfile: default
-
+    gitUrl: https://github.com/codesphere-cloud/csa-starter-service
+author: Codesphere
+capabilities:
+  backups: false
+  highAvailability: false
+  pause: false
+  pointInTimeRecovery: false
+category: Demo
+description: Simple Starter Service in Node.js to showcase the provider.yml
+displayName: Starter Service
+iconUrl: https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg
 configSchema:
   type: object
   properties:
-    TENANT_NAME:
-      type: string
-      description: Display name for the tenant using the Service
     APP_VERSION:
       type: string
-      description: Version of the App deployed
-      enum: ['1.0', '2.0']
-      default: '1.0'
     colorSchema:
       type: string
-      description: Color scheme for the frontend
-      enum: ['default', 'high-contrast', 'dark']
-      default: 'default'
-
+      enum:
+        - high-contrast
+        - dark
+        - defaul
+    TENANT_NAME:
+      type: string
+  required:
+    - APP_VERSION
+    - colorSchema
+    - TENANT_NAME
+  additionalProperties: false
 detailsSchema:
   type: object
+  properties:
+    hostname:
+      type: string
+      format: uri
+  additionalProperties: false
+secretsSchema:
+  type: object
   properties: {}
-             
-secretsSchema: {}
-
-plans:
-  - id: 0
-    name: "Default"
-    description: "Default Plan"
-    parameters: {}
+resourceParameters: {}
+plans: []
+versions:
+  0.0.1:
+    ciProfile: default
+    gitRef: main
+    description: ""
